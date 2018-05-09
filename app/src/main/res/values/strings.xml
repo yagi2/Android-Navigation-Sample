@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NavigationSample</string>
+    <string name="title_home">Home</string>
+
+    <string name="main_title">Main</string>
+    <string name="one_title">One</string>
+    <string name="two_title">Two</string>
+    <string name="three_title">Three</string>
+
+    <string name="next_button">Next Fragment</string>
+    <string name="to_top_button">To Main Fragment</string>
+</resources>

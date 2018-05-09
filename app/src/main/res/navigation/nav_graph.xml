@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_main"
+    >
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.yagi2.navigationsample.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main"
+        >
+
+        <action
+            android:id="@+id/action_main_to_flow_one"
+            app:destination="@id/fragment_one"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slise_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_one"
+        android:name="com.yagi2.navigationsample.FlowFragment"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one"
+        >
+
+        <argument
+            android:name="number"
+            android:defaultValue="1"
+            app:type="integer"
+            />
+
+        <action
+            android:id="@+id/action_next_flow"
+            app:destination="@id/fragment_two"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slise_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_two"
+        android:name="com.yagi2.navigationsample.FlowFragment"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_two"
+        >
+
+        <argument
+            android:name="number"
+            android:defaultValue="2"
+            app:type="integer"
+            />
+
+        <action
+            android:id="@+id/action_next_flow"
+            app:destination="@id/fragment_three"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slise_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_three"
+        android:name="com.yagi2.navigationsample.FlowFragment"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_three"
+        >
+
+        <argument
+            android:name="number"
+            android:defaultValue="3"
+            app:type="integer"
+            />
+
+        <action
+            android:id="@+id/action_next_flow"
+            app:popUpTo="@id/fragment_main"
+            />
+    </fragment>
+</navigation>
