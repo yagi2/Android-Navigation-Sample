@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.next_button).setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_main_to_flow_one, null)
+                Navigation.createNavigateOnClickListener(R.id.action_main_to_flow_one)
         )
     }
 }
