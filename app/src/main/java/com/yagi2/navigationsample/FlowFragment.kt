@@ -13,7 +13,9 @@ class FlowFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
 
-        val number = arguments?.getInt("number")
+        val number = arguments?.let {
+            FlowFragmentArgs.fromBundle(it).number
+        }
 
         return when (number) {
             1 -> inflater.inflate(R.layout.fragment_one, container, false)
