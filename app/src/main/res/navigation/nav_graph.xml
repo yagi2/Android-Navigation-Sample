@@ -32,7 +32,7 @@
         <argument
             android:name="number"
             android:defaultValue="1"
-            app:type="integer"
+            app:argType="integer"
             />
 
         <action
@@ -55,7 +55,7 @@
         <argument
             android:name="number"
             android:defaultValue="2"
-            app:type="integer"
+            app:argType="integer"
             />
 
         <action
@@ -78,7 +78,7 @@
         <argument
             android:name="number"
             android:defaultValue="3"
-            app:type="integer"
+            app:argType="integer"
             />
 
         <action
